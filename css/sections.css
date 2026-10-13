@@ -49,3 +49,120 @@
   height: 20px;
   flex-shrink: 0;
 }
+
+/* ==========================================================
+   SOBRE
+   ========================================================== */
+.about__grid {
+  display: grid;
+  gap: var(--espaco-16);
+  align-items: center;
+}
+
+/* Foto + moldura deslocada + selo */
+.about__media {
+  position: relative;
+  max-width: 480px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.about__media::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--cor-primaria);
+  border-radius: var(--raio-md);
+  pointer-events: none;
+}
+
+.about__media img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background-color: var(--cor-fundo);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-md);
+}
+
+.about__seal {
+  position: absolute;
+  right: var(--espaco-4);
+  bottom: calc(var(--espaco-6) * -1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 124px;
+  height: 124px;
+  text-align: center;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: 3px solid var(--cor-fundo-alt);
+  border-radius: 50%;
+  box-shadow: var(--sombra-md);
+}
+
+.about__seal-number {
+  font-family: var(--fonte-titulo);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about__seal-label {
+  max-width: 9ch;
+  margin-top: var(--espaco-1);
+  font-family: var(--fonte-titulo);
+  font-size: var(--texto-xs);
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Texto */
+.about__content p {
+  margin-bottom: var(--espaco-4);
+}
+
+.about__content .divider {
+  margin-bottom: var(--espaco-6);
+}
+
+.about__list {
+  display: grid;
+  gap: var(--espaco-3);
+  margin-block: var(--espaco-6) var(--espaco-8);
+}
+
+.about__list li {
+  position: relative;
+  padding-left: var(--espaco-8);
+  color: var(--cor-texto);
+}
+
+.about__list li::before {
+  content: "";
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 14px;
+  height: 2px;
+  background-color: var(--cor-primaria);
+}
+
+/* Duas colunas no desktop (ajuste fino no Commit 12) */
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: 5fr 6fr;
+    gap: var(--espaco-24);
+  }
+
+  .about__media {
+    margin-inline: 0;
+  }
+}
