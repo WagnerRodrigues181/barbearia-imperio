@@ -1,0 +1,64 @@
+:root {
+  /* ===== Cores ===== */
+  --cor-fundo: #1A1A1A;          /* grafite escuro */
+  --cor-fundo-alt: #242424;      /* carvão */
+  --cor-primaria: #B8872F;       /* bronze/dourado envelhecido */
+  --cor-secundaria: #8C2F2F;     /* vermelho profundo */
+  --cor-texto: #F2EFEA;          /* branco osso */
+  --cor-texto-suave: #B8B2A8;    /* cinza claro */
+
+  /* Variações úteis */
+  --cor-primaria-hover: #CFA04A;
+  --cor-secundaria-hover: #A33A3A;
+  --cor-borda: rgba(242, 239, 234, 0.12);
+  --cor-overlay: rgba(26, 26, 26, 0.72);
+  --cor-whatsapp: #25D366;
+
+  /* ===== Tipografia ===== */
+  --fonte-titulo: "Oswald", "Bebas Neue", Impact, sans-serif;
+  --fonte-corpo: "Inter", "Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --texto-xs: 0.8125rem;
+  --texto-sm: 0.9375rem;
+  --texto-base: 1rem;
+  --texto-lg: 1.125rem;
+  --texto-xl: 1.375rem;
+  --titulo-sm: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --titulo-md: clamp(2rem, 1.5rem + 2vw, 2.75rem);
+  --titulo-lg: clamp(2.75rem, 2rem + 4vw, 5rem);
+
+  /* ===== Espaçamento ===== */
+  --espaco-1: 0.25rem;
+  --espaco-2: 0.5rem;
+  --espaco-3: 0.75rem;
+  --espaco-4: 1rem;
+  --espaco-6: 1.5rem;
+  --espaco-8: 2rem;
+  --espaco-12: 3rem;
+  --espaco-16: 4rem;
+  --espaco-24: 6rem;
+
+  --secao-padding: clamp(4rem, 3rem + 5vw, 7rem);
+
+  /* ===== Layout ===== */
+  --container-max: 1200px;
+  --container-padding: 1.25rem;
+  --navbar-altura: 72px;
+
+  /* ===== Bordas e sombras ===== */
+  --raio-sm: 4px;
+  --raio-md: 8px;
+  --raio-lg: 16px;
+  --sombra-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --sombra-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+
+  /* ===== Transições ===== */
+  --transicao-rapida: 0.2s ease;
+  --transicao-media: 0.35s ease;
+  --transicao-lenta: 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ===== Camadas (z-index) ===== */
+  --z-navbar: 100;
+  --z-whatsapp: 110;
+  --z-menu-mobile: 120;
+}
