@@ -1,0 +1,51 @@
+/* ==========================================================
+   HERO
+   ========================================================== */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: var(--navbar-altura);
+  background-color: var(--cor-fundo);
+  background-image:
+    linear-gradient(to bottom, rgba(26, 26, 26, 0.55), rgba(26, 26, 26, 0.88)),
+    url("../assets/images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__content {
+  padding-block: var(--espaco-16);
+}
+
+.hero__title {
+  max-width: 14ch;
+  margin-bottom: var(--espaco-6);
+}
+
+.hero__title span {
+  color: var(--cor-primaria);
+}
+
+.hero__text {
+  max-width: 52ch;
+  margin-bottom: var(--espaco-8);
+  font-size: var(--texto-lg);
+  color: var(--cor-texto);
+  opacity: 0.85;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-4);
+}
+
+/* Ícone de rede social dentro de botões */
+.btn__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
