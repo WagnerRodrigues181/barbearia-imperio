@@ -15,13 +15,55 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
 
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <!-- NAVBAR (Commit 2) -->
-  <header id="topo"></header>
+  <!-- NAVBAR -->
+  <header class="navbar" id="topo">
+    <div class="container navbar__inner">
+
+      <a href="#topo" class="navbar__logo" aria-label="Barbearia Império - início">
+        Barbearia <span>Império</span>
+      </a>
+
+      <nav class="navbar__menu" id="menu-principal" aria-label="Navegação principal">
+        <ul class="navbar__list">
+          <li><a href="#sobre" class="navbar__link">Sobre</a></li>
+          <li><a href="#servicos" class="navbar__link">Serviços</a></li>
+          <li><a href="#equipe" class="navbar__link">Equipe</a></li>
+          <li><a href="#galeria" class="navbar__link">Galeria</a></li>
+          <li><a href="#depoimentos" class="navbar__link">Depoimentos</a></li>
+          <li><a href="#localizacao" class="navbar__link">Localização</a></li>
+        </ul>
+        <a
+          href="https://wa.me/5532999999999?text=Olá!%20Quero%20agendar%20um%20horário."
+          class="btn btn--primary btn--sm navbar__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Agendar
+        </a>
+      </nav>
+
+      <button
+        class="navbar__toggle"
+        id="navbar-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+      >
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <div class="navbar__overlay" id="navbar-overlay"></div>
+    </div>
+  </header>
 
   <main id="conteudo">
     <!-- HERO (Commit 3) -->
@@ -32,8 +74,8 @@
     <!-- DEPOIMENTOS (Commit 8) -->
     <!-- LOCALIZAÇÃO + HORÁRIOS (Commit 9) -->
 
-    <!-- Placeholder temporário: apagar no Commit 3 -->
-    <section class="section">
+    <!-- Placeholder temporário: apagar no Commit 3 (altura extra só pra testar o scroll) -->
+    <section class="section" style="min-height: 150vh;">
       <div class="container">
         <h1>Barbearia Império</h1>
         <p>Estrutura base funcionando.</p>
@@ -44,5 +86,6 @@
   <!-- FOOTER + WHATSAPP FLUTUANTE (Commit 10) -->
   <footer></footer>
 
+  <script src="js/main.js" defer></script>
 </body>
 </html>
