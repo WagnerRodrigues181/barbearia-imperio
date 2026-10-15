@@ -387,3 +387,89 @@
     justify-content: space-between;
   }
 }
+
+/* ==========================================================
+   EQUIPE
+   ========================================================== */
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--espaco-8);
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  transition:
+    border-color var(--transicao-media),
+    transform var(--transicao-media),
+    box-shadow var(--transicao-media);
+}
+
+.member:hover {
+  border-color: rgba(184, 135, 47, 0.5);
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-md);
+}
+
+.member__photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background-color: var(--cor-fundo-alt);
+}
+
+.member__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85);
+  transition:
+    transform var(--transicao-lenta),
+    filter var(--transicao-media);
+}
+
+.member:hover .member__photo img {
+  transform: scale(1.04);
+  filter: saturate(1);
+}
+
+/* Degradê na base da foto + fio bronze */
+.member__photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 40%;
+  background: linear-gradient(to top, var(--cor-fundo), transparent);
+  pointer-events: none;
+}
+
+.member__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+  padding: var(--espaco-6);
+  margin-top: calc(var(--espaco-8) * -1);
+}
+
+.member__role {
+  font-family: var(--fonte-titulo);
+  font-size: var(--texto-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cor-primaria);
+}
+
+.member__name {
+  font-size: var(--texto-xl);
+  color: var(--cor-texto);
+}
+
+.member__bio {
+  font-size: var(--texto-sm);
+}
