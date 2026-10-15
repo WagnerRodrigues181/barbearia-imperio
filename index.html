@@ -146,7 +146,162 @@
       </div>
     </section>
 
-    <!-- SERVIÇOS (Commit 5) -->
+    <!-- SERVIÇOS -->
+    <section class="section services" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="container">
+
+        <header class="section__header">
+          <span class="section__eyebrow">Serviços</span>
+          <h2 class="section__title" id="servicos-titulo">Tabela de serviços</h2>
+          <hr class="divider">
+          <p>Preços claros, sem surpresa na hora de pagar. Escolha o serviço e agende pelo WhatsApp.</p>
+        </header>
+
+        <!-- Filtro por categoria -->
+        <div class="filter" role="group" aria-label="Filtrar serviços por categoria">
+          <button class="filter__btn is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter__btn" type="button" data-filter="corte" aria-pressed="false">Corte</button>
+          <button class="filter__btn" type="button" data-filter="barba" aria-pressed="false">Barba</button>
+          <button class="filter__btn" type="button" data-filter="combo" aria-pressed="false">Combo</button>
+          <button class="filter__btn" type="button" data-filter="extras" aria-pressed="false">Extras</button>
+        </div>
+
+        <!-- Lista de serviços -->
+        <ul class="services__grid" aria-live="polite">
+
+          <!-- Combos -->
+          <li class="service service--featured" data-category="combo">
+            <span class="service__badge">Mais pedido</span>
+            <span class="service__category">Combo</span>
+            <div class="service__head">
+              <h3 class="service__name">Combo Completo</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 70</span>
+            </div>
+            <p class="service__desc">Corte, barba na navalha, sobrancelha e toalha quente. O pacote completo.</p>
+          </li>
+
+          <li class="service" data-category="combo">
+            <span class="service__category">Combo</span>
+            <div class="service__head">
+              <h3 class="service__name">Corte + Barba</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 60</span>
+            </div>
+            <p class="service__desc">Corte à sua escolha e barba feita na navalha.</p>
+          </li>
+
+          <!-- Cortes -->
+          <li class="service" data-category="corte">
+            <span class="service__category">Corte</span>
+            <div class="service__head">
+              <h3 class="service__name">Degradê</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 40</span>
+            </div>
+            <p class="service__desc">Degradê na máquina e navalha, com acabamento limpo.</p>
+          </li>
+
+          <li class="service" data-category="corte">
+            <span class="service__category">Corte</span>
+            <div class="service__head">
+              <h3 class="service__name">Corte Social</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 35</span>
+            </div>
+            <p class="service__desc">Corte clássico na tesoura e máquina.</p>
+          </li>
+
+          <li class="service" data-category="corte">
+            <span class="service__category">Corte</span>
+            <div class="service__head">
+              <h3 class="service__name">Corte Infantil</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 30</span>
+            </div>
+            <p class="service__desc">Para os pequenos, até 10 anos, com paciência e capricho.</p>
+          </li>
+
+          <li class="service" data-category="corte">
+            <span class="service__category">Corte</span>
+            <div class="service__head">
+              <h3 class="service__name">Pezinho e Acabamento</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 15</span>
+            </div>
+            <p class="service__desc">Manutenção entre um corte e outro.</p>
+          </li>
+
+          <!-- Barba -->
+          <li class="service" data-category="barba">
+            <span class="service__category">Barba</span>
+            <div class="service__head">
+              <h3 class="service__name">Barba na Navalha</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 30</span>
+            </div>
+            <p class="service__desc">Toalha quente, espuma e navalha. O ritual clássico.</p>
+          </li>
+
+          <li class="service" data-category="barba">
+            <span class="service__category">Barba</span>
+            <div class="service__head">
+              <h3 class="service__name">Barba Express</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 20</span>
+            </div>
+            <p class="service__desc">Alinhamento rápido na máquina, para quem está com pressa.</p>
+          </li>
+
+          <!-- Extras -->
+          <li class="service" data-category="extras">
+            <span class="service__category">Extras</span>
+            <div class="service__head">
+              <h3 class="service__name">Pigmentação</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 25</span>
+            </div>
+            <p class="service__desc">Cobre falhas na barba ou no cabelo com efeito natural.</p>
+          </li>
+
+          <li class="service" data-category="extras">
+            <span class="service__category">Extras</span>
+            <div class="service__head">
+              <h3 class="service__name">Hidratação Capilar</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 20</span>
+            </div>
+            <p class="service__desc">Hidratação para cabelo e barba, com produtos profissionais.</p>
+          </li>
+
+          <li class="service" data-category="extras">
+            <span class="service__category">Extras</span>
+            <div class="service__head">
+              <h3 class="service__name">Sobrancelha</h3>
+              <span class="service__leader" aria-hidden="true"></span>
+              <span class="service__price">R$ 10</span>
+            </div>
+            <p class="service__desc">Design na navalha, discreto e masculino.</p>
+          </li>
+
+        </ul>
+
+        <div class="services__cta">
+          <p>Não achou o que procurava? Chama no WhatsApp que a gente resolve.</p>
+          <a
+            href="https://wa.me/5532999999999?text=Olá!%20Quero%20agendar%20um%20horário."
+            class="btn btn--primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img class="btn__icon" src="assets/icons/whatsapp-icon.png" alt="" width="20" height="20">
+            Agendar no WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </section>
+
     <!-- EQUIPE (Commit 6) -->
     <!-- GALERIA (Commit 7) -->
     <!-- DEPOIMENTOS (Commit 8) -->
@@ -158,5 +313,6 @@
   <footer></footer>
 
   <script src="js/main.js" defer></script>
+  <script src="js/menu.js" defer></script>
 </body>
 </html>
