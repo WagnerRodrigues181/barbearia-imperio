@@ -11,7 +11,7 @@
   background-color: var(--cor-fundo);
   background-image:
     linear-gradient(to bottom, rgba(26, 26, 26, 0.55), rgba(26, 26, 26, 0.88)),
-    url("../assets/images/hero-bg.png");
+    url("../assets/images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -89,6 +89,7 @@
   box-shadow: var(--sombra-md);
 }
 
+/* Selo "Desde": carimbo de dupla borda, grafite + bronze */
 .about__seal {
   position: absolute;
   right: var(--espaco-4);
@@ -97,31 +98,69 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 124px;
-  height: 124px;
+  width: 132px;
+  height: 132px;
   text-align: center;
-  background-color: var(--cor-secundaria);
-  color: var(--cor-texto);
-  border: 3px solid var(--cor-fundo-alt);
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
   border-radius: 50%;
-  box-shadow: var(--sombra-md);
+  /* Anel grafite externo separa o selo da foto */
+  box-shadow: 0 0 0 5px var(--cor-fundo), var(--sombra-md);
+}
+
+/* Segunda borda, mais fina, por dentro */
+.about__seal::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(184, 135, 47, 0.45);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about__seal-eyebrow {
+  font-family: var(--fonte-titulo);
+  font-size: var(--texto-xs);
+  letter-spacing: 0.3em;
+  text-indent: 0.3em; /* compensa o espaço final do letter-spacing */
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--cor-primaria);
 }
 
 .about__seal-number {
+  margin-block: var(--espaco-1);
   font-family: var(--fonte-titulo);
   font-size: 2.25rem;
   font-weight: 700;
+  letter-spacing: 0.02em;
   line-height: 1;
+  color: var(--cor-texto);
 }
 
 .about__seal-label {
-  max-width: 9ch;
-  margin-top: var(--espaco-1);
+  position: relative;
+  padding-top: var(--espaco-1);
   font-family: var(--fonte-titulo);
-  font-size: var(--texto-xs);
-  letter-spacing: 0.12em;
-  line-height: 1.2;
+  font-size: 0.6875rem;
+  letter-spacing: 0.25em;
+  text-indent: 0.25em;
+  line-height: 1;
   text-transform: uppercase;
+  color: var(--cor-primaria);
+}
+
+/* Fio fino separando o ano da palavra "Tradição" */
+.about__seal-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 1px;
+  background-color: rgba(184, 135, 47, 0.6);
+  transform: translateX(-50%);
 }
 
 /* Texto */
